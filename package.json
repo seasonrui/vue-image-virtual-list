@@ -1,33 +1,48 @@
 {
-  "name": "vue-virtual-list",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "vue-image-virtual-list",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vue-image-virtual-list --dest lib src/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seasonrui/vue-virtual-list.git"
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "mockjs": "^1.0.1-beta3",
+    "vue": "^2.6.10"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/seasonrui/vue-virtual-list/issues"
-  },
-  "homepage": "https://github.com/seasonrui/vue-virtual-list#readme",
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "style-loader": "^0.23.1",
-    "vue": "^2.6.10",
-    "vue-loader": "^15.7.0",
-    "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6"
-  }
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-eslint": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
